@@ -11,12 +11,14 @@ import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import { ShopContext } from './context/ShopContext'
 
 const App = () => {
   return (
     <div className= 'px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <Navbar/>
-      <Hero/>
+     
+      
 
       <Routes>
         <Route path='/' element={<Home/>}/>
