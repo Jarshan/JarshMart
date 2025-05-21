@@ -50,15 +50,30 @@ const Collection = () => {
       }
 
 
-      
+      const sortProduct = () => {
+        let fpCopy =  filterProducts.slice()
+        switch(sortType){
+          case 'low-high':
+            setFilterProducts(fpCopy.sort((a,b)=>(a.price - b.price)));
+            break;
+    
+          case 'high-low':
+            setFilterProducts(fpCopy.sort((a,b)=>(b.price - a.price)));
+            break;
+    
+            default:
+              applyFilter();
+              break;
+        }
+      }
 
       useEffect(()=>{
         applyFilter()
       },[category,subCategory,search,showSearch,products])
     
-    //   useEffect(()=>{
-    //     sortProduct()
-    //   },[sortType])
+      useEffect(()=>{
+        sortProduct()
+      },[sortType])
 
 
     return (
