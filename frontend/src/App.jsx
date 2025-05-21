@@ -12,6 +12,7 @@ import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import { ShopContext } from './context/ShopContext'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -29,10 +30,9 @@ const App = () => {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/place-order' element={<PlaceOrder/>}/>
-        <Route path='/orders' element={<Orders/>}/>
-
-        
+        <Route path='/orders' element={<Orders/>}/> 
       </Routes>
+      <Footer/>
 
     </div>
   )
