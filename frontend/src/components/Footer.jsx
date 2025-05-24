@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm '>
         <div>
-            <img src={assets.logo} className='mb-5 w-32' alt=''/>
+            <img src={assets.logo2} className='mb-5 w-32' alt=''/>
             {/* <h1 className='text-xl  mb-5'>JarshMart</h1> */}
             <p className='w-full md:w-2/3 text-gray-600'>We believe clothing is more than just fabric—it's an expression of who you are. Our mission is to bring you stylish, high-quality, and affordable fashion that makes you look and feel your best.</p>
         </div>
