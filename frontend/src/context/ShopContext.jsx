@@ -47,33 +47,33 @@ const ShopContextProvider = (props) => {
 
     //   };
 
-    //   const getCartCount = () => {
-    //     let totalCount = 0;
-    //     for (const items in cartItems) {
-    //       for (const item in cartItems[items]) {
-    //         try {
-    //           if (cartItems[items][item]) {
-    //             totalCount += cartItems[items][item];
-    //           }
-    //         } catch (error) {}
-    //       }
-    //     }
-    //     return totalCount;
-    //   };
+      const getCartCount = () => {
+        let totalCount = 0;
+        for (const items in cartItems) {
+          for (const item in cartItems[items]) {
+            try {
+              if (cartItems[items][item]) {
+                totalCount += cartItems[items][item];
+              }
+            } catch (error) {}
+          }
+        }
+        return totalCount;
+      };
 
-    //   const updateQuantity = async (itemId, size, quantity) => {
-    //     let cartData = structuredClone(cartItems);
-    //     cartData[itemId][size] = quantity;
-    //     setCartItems(cartData);
-    //     if(token){
-    //       try {
-    //         await axios.post(backendUrl+"/api/cart/update",{itemId, size, quantity},{headers:{token}})
-    //       } catch (error) {
-    //         console.log(error)
-    //         toast.error(error.message)
-    //       }
-    //     }
-    //   };
+      const updateQuantity = async (itemId, size, quantity) => {
+        let cartData = structuredClone(cartItems);
+        cartData[itemId][size] = quantity;
+        setCartItems(cartData);
+        if(token){
+          try {
+            await axios.post(backendUrl+"/api/cart/update",{itemId, size, quantity},{headers:{token}})
+          } catch (error) {
+            console.log(error)
+            toast.error(error.message)
+          }
+        }
+      };
 
     //   const getCartAmount = ()=>{
     //     let totalAmount = 0
@@ -141,7 +141,7 @@ const ShopContextProvider = (props) => {
         cartItems,
         setCartItems,
         addToCart,
-        // getCartCount,
+        getCartCount,
         // updateQuantity,
         // getCartAmount,
         // token,
