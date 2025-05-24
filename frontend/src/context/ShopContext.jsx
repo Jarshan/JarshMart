@@ -10,8 +10,8 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 300;
     //   const [token,setToken] = useState("")
     //   const [products,setProducts] = useState([])
-    //   const [search, setSearch] = useState("");
-    //   const [showSearch, setShowSearch] = useState(false);
+    const [search, setSearch] = useState("");
+    const [showSearch, setShowSearch] = useState(false);
     //   const [cartItems, setCartItems] = useState({});
 
 
@@ -133,10 +133,10 @@ const ShopContextProvider = (props) => {
         products,
         currency,
         delivery_fee,
-        // search,
-        // setSearch,
-        // showSearch,
-        // setShowSearch,
+        search,
+        setSearch,
+        showSearch,
+        setShowSearch,
         // cartItems,
         // setCartItems,
         // addToCart,
