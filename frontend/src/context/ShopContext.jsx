@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets";
 // import  axios  from 'axios'
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 // import backendUrl from "../helpers/backendUrl";
 export const ShopContext = createContext();
 
@@ -13,6 +14,7 @@ const ShopContextProvider = (props) => {
     const [search, setSearch] = useState("");
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
+    const navigate = useNavigate();
 
 
       const addToCart = async (itemId, size) => {
@@ -81,7 +83,7 @@ const ShopContextProvider = (props) => {
             let itemInfo = products.find((product)=>product._id===items);
             for(const item in cartItems[items]){
                 try{
-                    if(cartItems[items][item]){
+                    if(cartItems[items][item] ){
                         totalAmount += itemInfo.price * cartItems[items][item]
                     }
                 }catch(error){
@@ -144,6 +146,7 @@ const ShopContextProvider = (props) => {
         getCartCount,
         updateQuantity,
         getCartAmount,
+        navigate,
         // token,
         // setToken
     };
