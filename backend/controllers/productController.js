@@ -19,8 +19,7 @@ const addProduct = async (req, res) => {
     const image4 = req.files.image4 && req.files.image4[0];
 
     const images = [image1, image2, image3, image4].filter(
-      (item) => item !== undefined
-    );
+      (item) => item !== undefined);
 
     let imagesUrl = await Promise.all(
       images.map(async (item) => {
@@ -42,6 +41,7 @@ const addProduct = async (req, res) => {
       image: imagesUrl,
       date: Date.now(),
     };
+    
     const product = new productModel(productData);
     await product.save();
     res.json({ success: true, message: "Product Added" });
