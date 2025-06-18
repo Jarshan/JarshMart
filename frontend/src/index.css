@@ -24,3 +24,8 @@ a.active hr{
         color: white;
     }
 }  
+
+body {
+    /* background-color: rgb(34, 225, 225); */
+    background-color: rgb(222, 203, 190);
+  }
