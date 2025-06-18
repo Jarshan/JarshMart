@@ -8,9 +8,14 @@ const LatestCollection = () => {
     const { products } = useContext(ShopContext);
     const [latestProducts,setLatestProducts] =useState([]);
 
-    useEffect(()=>{
-        setLatestProducts(products.slice(0,10))
-    },[products])
+    // useEffect(()=>{
+    //     setLatestProducts(products.slice(0,15))
+    // },[products])
+    useEffect(() => {
+      const sorted = [...products].reverse(); // Reverse to show newest first
+      setLatestProducts(sorted.slice(0, 15));
+    }, [products]);
+    
 
     
   return (

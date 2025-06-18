@@ -98,8 +98,18 @@ const Collection = () => {
                         <p className='flex gap-2'>
                             <input type="checkbox" className='w-3' value={'Kids'} onChange={toggleCategory} />Kids
                         </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Airpods'} onChange={toggleCategory} />Airpods
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Mobiles'} onChange={toggleCategory} />Mobiles
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Watches'} onChange={toggleCategory} />Watches
+                        </p>
                     </div>
                 </div>
+
                 {/* SubCategory Filter */}
                 <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium'>TYPE</p>
@@ -113,6 +123,18 @@ const Collection = () => {
                         </p>
                         <p className='flex gap-2'>
                             <input type="checkbox" className='w-3' value={'Winterwear'} onChange={toggleSubCategory} />Winterwear
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Metalic'} onChange={toggleSubCategory} />Metalic
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Samsung'} onChange={toggleSubCategory} />Samsung
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Apple'} onChange={toggleSubCategory} />Apple
+                        </p>
+                        <p className='flex gap-2'>
+                            <input type="checkbox" className='w-3' value={'Vivo'} onChange={toggleSubCategory} />Vivo
                         </p>
                     </div>
                 </div>
